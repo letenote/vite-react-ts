@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useAppDispatch } from '../../store';
-import { checkAuth } from '../../store/slice/settings/user/actions/checkAuth';
-import LoadingScreen from '../LoadingScreen';
+import React, { useEffect } from "react";
+import { useAppDispatch } from "../../store";
+import { checkAuth } from "../../store/slice/settings/user/actions/checkAuth";
+import LoadingScreen from "../LoadingScreen";
 
 const CheckAuth = () => {
   const dispatch = useAppDispatch();
@@ -11,7 +11,7 @@ const CheckAuth = () => {
 
   return (
     <LoadingScreen
-      message={'Please wait, we are checking your authorization ...'}
+      message={"Please wait, we are checking your authorization ..."}
     />
   );
 };

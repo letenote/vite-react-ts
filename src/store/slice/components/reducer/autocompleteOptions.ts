@@ -1,8 +1,8 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import {
   AutocompleteOptionListInterface,
   AutocompleteOptionsInterface,
-} from '../interface/AutocompleteOptionsInterface.interface';
+} from "../interface/AutocompleteOptionsInterface.interface";
 
 const initialState: AutocompleteOptionsInterface = {
   vendor: {
@@ -20,7 +20,7 @@ const initialState: AutocompleteOptionsInterface = {
 };
 
 export const AutocompleteOptionsSlice = createSlice({
-  name: 'autocomplete-input-options',
+  name: "autocomplete-input-options",
   initialState,
   reducers: {
     setAutocompleteOptionsLoading: (
@@ -43,7 +43,8 @@ export const AutocompleteOptionsSlice = createSlice({
         ...action.payload.list.map((option) => {
           return {
             id: option.id,
-            label: option[action.payload.type !== 'budget' ? 'name' : 'code'],
+            label:
+              option[action.payload.type !== "budget" ? "name" : "code"] || "",
           };
         }),
       ];

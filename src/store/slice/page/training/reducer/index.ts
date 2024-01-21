@@ -1,9 +1,9 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
   PageTrainingListReducerInterface,
   PageTrainingReducerInterface,
   TrainingDetailReducerInterface,
-} from '../interface/PageTrainingReducerInterface.interface';
+} from "../interface/PageTrainingReducerInterface.interface";
 
 const initialState: PageTrainingReducerInterface = {
   listLoading: true,
@@ -11,12 +11,45 @@ const initialState: PageTrainingReducerInterface = {
   totalPage: 0,
   detail: {
     loading: true,
-    data: null,
+    data: {
+      id: "",
+      name: "",
+      createdAt: "",
+      startDate: "",
+      endDate: "",
+      objective: "",
+      duration: "",
+      createdBy: {
+        id: "",
+        name: "",
+        departement: {
+          id: "",
+          name: "",
+        },
+      },
+      budget: {
+        name: "",
+        id: "",
+        code: "",
+        cost: "",
+        requestBy: {
+          id: "",
+          name: "",
+          createdAt: "",
+        },
+      },
+      trainingType: {
+        id: "",
+        name: "",
+      },
+      participants: [],
+      payments: [],
+    },
   },
 };
 
 export const TrainingSlice = createSlice({
-  name: 'page-training',
+  name: "page-training",
   initialState,
   reducers: {
     setTrainingListLoading: (

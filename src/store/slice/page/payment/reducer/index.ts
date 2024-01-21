@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
   PagePaymentListReducerInterface,
   PagePaymentReducerInterface,
-} from '../interface/PagePaymentReducerInterface.interface';
+} from "../interface/PagePaymentReducerInterface.interface";
 
 const initialState: PagePaymentReducerInterface = {
   listLoading: true,
@@ -10,12 +10,61 @@ const initialState: PagePaymentReducerInterface = {
   totalPage: 0,
   detail: {
     loading: true,
-    data: null,
+    data: {
+      id: "",
+      cost: "",
+      invoice: "",
+      notes: "",
+      isPaid: false,
+      createdAt: "",
+      date: "",
+      training: {
+        name: "",
+        id: "",
+        objective: "",
+        duration: "",
+        startDate: "",
+        endDate: "",
+        participants: [],
+        trainingType: {
+          id: "",
+          name: "",
+        },
+        createdBy: {
+          id: "",
+          name: "",
+          departement: {
+            id: "",
+            name: "",
+          },
+        },
+      },
+      budget: {
+        name: "",
+        id: "",
+        requestBy: {
+          id: "",
+          name: "",
+          departement: {
+            id: "",
+            name: "",
+          },
+        },
+      },
+      vendor: {
+        id: "",
+        name: "",
+        vendorType: {
+          id: "",
+          name: "",
+        },
+      },
+    },
   },
 };
 
 export const PaymentSlice = createSlice({
-  name: 'page-payment',
+  name: "page-payment",
   initialState,
   reducers: {
     setPaymentListLoading: (
