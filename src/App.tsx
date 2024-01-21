@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import Snackbar from "@mui/material/Snackbar/Snackbar";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
+const Routes = lazy(() => import("./routes"));
 const CheckAuth = lazy(() => import("./components/CheckAuth"));
 
 function App() {
@@ -57,8 +58,7 @@ function App() {
             {snackbar.message}
           </Alert>
         </Snackbar>
-        {/* <Routes /> */}
-        <div>hello</div>
+        <Routes />
       </Suspense>
     </BrowserRouter>
   );
