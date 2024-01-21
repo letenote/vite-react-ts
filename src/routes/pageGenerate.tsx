@@ -2,7 +2,7 @@
 import { lazy } from "react";
 const Dashboard = lazy(() => import("../containers/Dashboard/index"));
 const Budget = lazy(() => import("../containers/Budget/index"));
-// const Payment = lazy(() => import('../containers/Payment/index'));
+const Payment = lazy(() => import("../containers/Payment/index"));
 const Settings = lazy(() => import("../containers/Settings/index"));
 const Vendor = lazy(() => import("../containers/Vendor/index"));
 const User = lazy(() => import("../containers/User/index"));
@@ -22,8 +22,8 @@ export const pageGenerate = (pageName: string): JSX.Element => {
       return <Settings />;
     case "/monitoring":
       return <Monitoring />;
-    // case '/payment':
-    //   return <Payment />;
+    case "/payment":
+      return <Payment />;
     case "/budget":
       return <Budget />;
     case "/user":

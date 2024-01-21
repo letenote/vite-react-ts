@@ -1,14 +1,14 @@
-import { Suspense, lazy } from "react";
+import { lazy, Suspense } from "react";
 import { useAppSelector, useAppDispatch } from "./store";
 import { setSnackbar } from "./store/slice/components/reducer/snackbar";
 import { BrowserRouter } from "react-router-dom";
-import Snackbar from "@mui/material/Snackbar/Snackbar";
-import CircularProgress from "@mui/material/CircularProgress";
-import Alert from "@mui/material/Alert";
-const Routes = lazy(() => import("./routes"));
+const Routes = lazy(() => import("./routes/index"));
+const CircularProgress = lazy(() => import("@mui/material/CircularProgress"));
+const Alert = lazy(() => import("@mui/material/Alert/Alert"));
+const Snackbar = lazy(() => import("@mui/material/Snackbar"));
 const CheckAuth = lazy(() => import("./components/CheckAuth"));
 
-function App() {
+const App = () => {
   const getToken = localStorage.getItem("_token");
   const dispatch = useAppDispatch();
   const { snackbar } = useAppSelector((state) => state.components);
@@ -62,6 +62,6 @@ function App() {
       </Suspense>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

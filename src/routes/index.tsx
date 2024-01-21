@@ -9,7 +9,7 @@ const LoadingScreen = lazy(() => import("../components/LoadingScreen"));
 const ProtectedRoute = lazy(() => import("./ProtectedRoute"));
 const PublicRoute = lazy(() => import("./PublicRoute"));
 const Login = lazy(() => import("../containers/Login/index"));
-// const Page404 = lazy(() => import('../containers/Page404/index'));
+const Page404 = lazy(() => import("../containers/Page404/index"));
 
 const homeRoute: RouteObject = {
   path: "",
@@ -33,8 +33,7 @@ const page404Route: RouteObject = {
   path: "*",
   element: (
     <ProtectedRoute>
-      {/* <Page404 /> */}
-      <div>page404</div>
+      <Page404 />
     </ProtectedRoute>
   ),
 };
