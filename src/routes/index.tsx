@@ -1,6 +1,6 @@
 import { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import { Routes, Route, useRoutes, RouteObject } from "react-router-dom";
-// import Layout from '../layout/index';
+import Layout from "../layout/index";
 import { useAppSelector } from "../store";
 import { MenuType } from "../store/slice/settings/user/interface/userReducerInterface.interface";
 import { pageGenerate } from "./pageGenerate";
@@ -8,7 +8,7 @@ import { pageGenerate } from "./pageGenerate";
 const LoadingScreen = lazy(() => import("../components/LoadingScreen"));
 const ProtectedRoute = lazy(() => import("./ProtectedRoute"));
 const PublicRoute = lazy(() => import("./PublicRoute"));
-// const Login = lazy(() => import('../containers/Login/index'));
+const Login = lazy(() => import("../containers/Login/index"));
 // const Page404 = lazy(() => import('../containers/Page404/index'));
 
 const homeRoute: RouteObject = {
@@ -24,8 +24,7 @@ const loginRoute: RouteObject = {
   path: "login",
   element: (
     <PublicRoute>
-      {/* <Login /> */}
-      <div>login</div>
+      <Login />
     </PublicRoute>
   ),
 };
@@ -80,8 +79,7 @@ const Core = () => {
                 message={"Please wait, we are checking your data ..."}
               />
             ) : (
-              // <Layout />
-              <div>layout</div>
+              <Layout />
             )
           }
         >
