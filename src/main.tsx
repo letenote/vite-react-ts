@@ -1,10 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+// import { registerSW } from "virtual:pwa-register";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { ThemeProvider } from "@mui/material/styles";
+import { Theme } from "./constant/Theme";
+// registerSW({ immediate: true });
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// replace console.* for disable log on production
+if (import.meta.env.MODE === "PROD") {
+  console.log = () => {};
+  console.error = () => {};
+  console.warn = () => {};
+  console.debug = () => {};
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <Provider store={store}>
+    <ThemeProvider theme={Theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>
+);
