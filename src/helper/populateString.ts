@@ -1,7 +1,9 @@
-export const getInitialName = (name: string = "Jane Doe") => {
-  //PR
+export const getInitialName = (name: string = "Jane Doe"): string => {
   // return name.match(/(\b\S)?/g).join("");
-  return name;
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("");
 };
 
 export const capitalizeFirstLetter = (str: string = "Jane Doe"): string => {

@@ -1,6 +1,6 @@
 import { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import { Routes, Route, useRoutes, RouteObject } from "react-router-dom";
-import Layout from "../layout/index";
+import Layout from "../layout";
 import { useAppSelector } from "../store";
 import { MenuType } from "../store/slice/settings/user/interface/userReducerInterface.interface";
 import { pageGenerate } from "./pageGenerate";

@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
-// import { lazy } from 'react';
-// const Dashboard = lazy(() => import('../containers/Dashboard/index'));
+import { lazy } from "react";
+const Dashboard = lazy(() => import("../containers/Dashboard/index"));
 // const Budget = lazy(() => import('../containers/Budget/index'));
 // const Payment = lazy(() => import('../containers/Payment/index'));
 // const Settings = lazy(() => import('../containers/Settings/index'));
@@ -14,8 +14,8 @@
 
 export const pageGenerate = (pageName: string): JSX.Element => {
   switch (pageName.toLowerCase()) {
-    // case '/dashboard':
-    //   return <Dashboard />;
+    case "/dashboard":
+      return <Dashboard />;
     // case '/vendor':
     //   return <Vendor />;
     // case '/setting':
