@@ -1,9 +1,9 @@
-import { DateRange } from '@mui/x-date-pickers-pro';
-import { SelectInputDialogTypes } from '../../SelectInputDialog/type/SelectInputDialogTypes.type';
-import { ComponentFormTypes } from './ComponentFormTypes.type';
-import { SelectOptionsTypes } from './SelectOptionsTypes.type';
-import { AutocompleteOptionType } from '../../Autocomplete/type/AutocompleteInputTypes.type';
-import { Dayjs } from 'dayjs';
+import { DateRange } from "@mui/x-date-pickers-pro";
+import { SelectInputDialogTypes } from "../../SelectInputDialog/type/SelectInputDialogTypes.type";
+import { ComponentFormTypes } from "./ComponentFormTypes.type";
+import { SelectOptionsTypes } from "./SelectOptionsTypes.type";
+import { AutocompleteOptionType } from "../../Autocomplete/type/AutocompleteInputTypes.type";
+import { Dayjs } from "dayjs";
 
 export type FormType = {
   id: string;
