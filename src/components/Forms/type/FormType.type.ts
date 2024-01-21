@@ -106,7 +106,7 @@ export type SingleAutocompleteFormType = {
   placeholder: string;
   required: boolean;
   errorMessage: string;
-  value: AutocompleteOptionType;
+  value: null | AutocompleteOptionType;
   disabled: boolean;
   type: string;
   componentType: ComponentFormTypes;

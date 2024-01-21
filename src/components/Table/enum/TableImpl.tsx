@@ -1,0 +1,5 @@
+export enum TableImpl {
+  BUDGET_PAGE = 'BUDGET_PAGE',
+  TRAINING_PAGE = 'TRAINING_PAGE',
+  PAYMENT_PAGE = 'PAYMENT_PAGE',
+}

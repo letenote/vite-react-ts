@@ -77,10 +77,46 @@ export const TrainingSlice = createSlice({
     setTrainingDetailData: (
       state,
       action: PayloadAction<{
-        data: TrainingDetailReducerInterface;
+        data: TrainingDetailReducerInterface | null;
       }>
     ) => {
-      state.detail.data = action.payload.data;
+      state.detail.data =
+        action.payload.data === null
+          ? {
+              id: "",
+              name: "",
+              createdAt: "",
+              startDate: "",
+              endDate: "",
+              objective: "",
+              duration: "",
+              createdBy: {
+                id: "",
+                name: "",
+                departement: {
+                  id: "",
+                  name: "",
+                },
+              },
+              budget: {
+                name: "",
+                id: "",
+                code: "",
+                cost: "",
+                requestBy: {
+                  id: "",
+                  name: "",
+                  createdAt: "",
+                },
+              },
+              trainingType: {
+                id: "",
+                name: "",
+              },
+              participants: [],
+              payments: [],
+            }
+          : action.payload.data;
     },
   },
 });
