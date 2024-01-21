@@ -6,7 +6,7 @@ const Budget = lazy(() => import("../containers/Budget/index"));
 const Settings = lazy(() => import("../containers/Settings/index"));
 const Vendor = lazy(() => import("../containers/Vendor/index"));
 const User = lazy(() => import("../containers/User/index"));
-// const Monitoring = lazy(() => import('../containers/Monitoring/index'));
+const Monitoring = lazy(() => import("../containers/Monitoring/index"));
 const Training = lazy(() => import("../containers/Training/index"));
 const CreeateTraining = lazy(
   () => import("../containers/Training/create/index")
@@ -20,8 +20,8 @@ export const pageGenerate = (pageName: string): JSX.Element => {
       return <Vendor />;
     case "/setting":
       return <Settings />;
-    // case '/monitoring':
-    //   return <Monitoring />;
+    case "/monitoring":
+      return <Monitoring />;
     // case '/payment':
     //   return <Payment />;
     case "/budget":
