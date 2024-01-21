@@ -1,0 +1,1 @@
+import{c as e,s as t,a as o,b as r}from"./vendor-fwd-1SGvIy31.js";const s=e({createStyledComponent:t("div",{name:"MuiContainer",slot:"Root",overridesResolver:(e,t)=>{const{ownerState:r}=e;return[t.root,t[`maxWidth${o(String(r.maxWidth))}`],r.fixed&&t.fixed,r.disableGutters&&t.disableGutters]}}),useThemeProps:e=>r({props:e,name:"MuiContainer"})});export{s as C};

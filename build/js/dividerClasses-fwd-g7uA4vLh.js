@@ -1,0 +1,1 @@
+import{k as i,l as t}from"./vendor-fwd-1SGvIy31.js";function e(i){return t("MuiDivider",i)}const r=i("MuiDivider",["root","absolute","fullWidth","inset","middle","flexItem","light","vertical","withChildren","withChildrenVertical","textAlignRight","textAlignLeft","wrapper","wrapperVertical"]);export{r as d,e as g};

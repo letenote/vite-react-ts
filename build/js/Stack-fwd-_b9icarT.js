@@ -1,0 +1,1 @@
+import{v as o,s as e,b as s}from"./vendor-fwd-1SGvIy31.js";const r=o({createStyledComponent:e("div",{name:"MuiStack",slot:"Root",overridesResolver:(o,e)=>e.root}),useThemeProps:o=>s({props:o,name:"MuiStack"})});export{r as S};

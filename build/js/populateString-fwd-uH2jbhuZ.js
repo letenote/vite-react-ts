@@ -1,0 +1,1 @@
+const e=(e="Jane Doe")=>e.split(" ").map((e=>e[0])).join(""),a=(e="Jane Doe")=>[...e][0].toUpperCase()+e.slice(1),s=(e="Jane Doe")=>{const a=e.replace(/([A-Z])/g," $1");return a.charAt(0).toUpperCase()+a.slice(1)};export{s as a,a as c,e as g};

@@ -1,0 +1,1 @@
+var e=(e=>(e.ALL="All",e.DRAFT="Draft",e.IN_PROGRESS="InProgress",e.NEED_REVIEW="Need Review",e.NEED_APPROVE="Need Approve",e.APPROVE="Approve",e.REJECT="Reject",e.UNKNOWN="Unknown",e))(e||{});export{e as B};

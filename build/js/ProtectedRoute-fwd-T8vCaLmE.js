@@ -1,0 +1,1 @@
+import{r as o,u as s,j as e,N as r}from"./vendor-fwd-1SGvIy31.js";import{u as t}from"./main-fwd--n1B72RI.js";const a=o.memo((({children:o})=>{const{user:a}=t((o=>o.settings)),n=s();return console.log("DEBUG:ROUTE:PROTECTED",{location:n,user:a}),a.authed?o:e.jsx(r,{to:"/login",state:{from:n},replace:!0})}));export{a as default};

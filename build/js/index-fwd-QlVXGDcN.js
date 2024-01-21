@@ -1,0 +1,1 @@
+import{k as a,a6 as e,ax as s,ag as o,F as t}from"./vendor-fwd-1SGvIy31.js";const r=a("MuiBox",["root"]),d=s({themeId:o,defaultTheme:e(),defaultClassName:r.root,generateClassName:t.generate});export{r as boxClasses,d as default};
